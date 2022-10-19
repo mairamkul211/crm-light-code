@@ -1,10 +1,10 @@
-import MainPage from "./components/MainPage";
+import Header from "./components/headers/Header";
 
 function App() {
   return (
     <div className="App">
       {/* <p>Development</p> */}
-      <MainPage />
+      <Header/>
     </div>
   );
 }
