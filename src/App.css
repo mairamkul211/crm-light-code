@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.nav-list-items:hover{
+  border-bottom: 1px solid black;
+}
 
 .App-logo {
   height: 40vmin;
