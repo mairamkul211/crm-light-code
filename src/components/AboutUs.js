@@ -104,7 +104,6 @@ const Title = styled.div`
 
 const ContainerQuestion = styled.div`
   margin-top: 70px;
-  /* border: 1px solid aqua; */
 `;
 
 const FirstBlock = styled.div`
