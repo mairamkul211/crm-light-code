@@ -5,7 +5,7 @@ function Header() {
   const stylednav = {
     fontStyle: "normal",
     fontWeight: "400",
-    fontSize: "16px",
+    fontSize: "24px",
     lineheight: "44px",
     color: "#D9D9D9",
     textDecoration: "none",
@@ -37,7 +37,7 @@ export default Header;
 
 const StyledHeader = styled.div`
   font-family: "Inter";
-  width: 1080px;
+  width: 1440px;
   height: 124px;
   background: #04030a;
   margin: 0 auto;
@@ -52,7 +52,7 @@ const StyledHeader = styled.div`
       font-family: "Inter";
       font-style: normal;
       font-weight: 400;
-      font-size: 26px;
+      font-size: 30px;
       line-height: 44px;
       margin-left: 5px;
       padding-right: 369px;

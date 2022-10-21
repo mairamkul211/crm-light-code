@@ -2,25 +2,34 @@ import styled from "styled-components";
 import vidio from "../assets/images/vidio.svg";
 import information from "../assets/images/information.svg";
 import { useState } from "react";
+import Modal from "./UI/Modal";
 
 function Infonrmation() {
   const [modal, setModal] = useState(false);
+
+  const handleClose = () => setModal(false);
+
   return (
     <Container>
       <div>
-        <p>“Курсы программирования Бишкек Light Code” с видеоконтентом</p>
+        <p className="course">
+          “Курсы программирования Бишкек Light Code” с видеоконтентом
+        </p>
         <img src={vidio} alt="img" onClick={() => setModal(true)} />
-        {modal && (
-          <Video
+        <Modal open={modal} handleClose={handleClose}>
+          <video
             width="960"
-            height="615"
-            src="https://www.youtube.com/embed/Dz_EZg8jB8g"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></Video>
-        )}
+            height="615px"
+            controls=""
+            autoplay=""
+            name="media"
+          >
+            <source
+              src="https://lightcode-bishkek.xyz/static/media/v2.4f96f663.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </Modal>
       </div>
       <div>
         <p>“Light Code” с текстовой информацией</p>
@@ -32,17 +41,9 @@ function Infonrmation() {
 
 export default Infonrmation;
 
-const Video = styled.iframe`
-  width: 960;
-  height: 615;
-  margin: 0 auto;
-  z-index: 1;
-  position: absolute;
-  /* bottom: ; */
-`;
 const Container = styled.div`
   margin: 0 auto;
-  width: 1920px;
+  width: 1440px;
   display: flex;
   justify-content: space-between;
   height: 446px;
@@ -57,13 +58,15 @@ const Container = styled.div`
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 48px;
-    width: 755px;
     height: 105.24px;
     color: #ffffff;
   }
   & > div > img {
     cursor: pointer;
+  }
+  & .course {
+    width: 600px;
   }
 `;
