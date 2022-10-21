@@ -5,10 +5,15 @@ function OurCourses() {
   return (
     <Container>
       <div className="block">
-        <p>“Чему мы обучаем?”</p>
-        <p>все курсы</p>
+        <p className="lightCod">Light Code</p>
+        <p className="lightCod">Чему мы обучаем?</p>
+        <p className="text">
+          Здесь находятся все курсы программы, которые помогут вам стать
+          востребованным на рынке труда уже сегодня. Вы можете выбрать любое
+          количество из представленных курсов. Курсы сделаны в формате
+          видеоуроков и доступны в любое удобное для вас время.
+        </p>
       </div>
-      <Line />
       <Cart>
         {array.map((el) => {
           return (
@@ -33,20 +38,25 @@ const Container = styled.div`
   & p {
     font-family: "Inter";
     font-style: normal;
-    font-weight: 400;
     font-size: 35px;
-    line-height: 48px;
     color: #ffffff;
   }
   & .block {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
   }
-`;
-const Line = styled.div`
-  width: 1440px;
-  margin: 0 auto;
-  border: 1px solid #ffffff;
+  & .text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 33.5px;
+    line-height: 47px;
+    text-align: center;
+    width: 1200px;
+  }
+  & .lightCod{
+    font-size: 44px;
+  }
 `;
 const Cart = styled.div`
   display: flex;
