@@ -25,8 +25,8 @@ function Header() {
         </svg>
         <p>Light Сode</p>
       </div>
-      <NavLink style={stylednav}>Наши курсы</NavLink>
-      <NavLink style={stylednav}>О нас</NavLink>
+      <NavLink to="/ourCourses" style={stylednav}>Наши курсы</NavLink>
+      <NavLink to="/footer" style={stylednav}>О нас</NavLink>
       <NavLink style={stylednav}>Отзывы</NavLink>
       <NavLink style={stylednav}>Контакты</NavLink>
     </StyledHeader>
