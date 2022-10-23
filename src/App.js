@@ -2,6 +2,7 @@ import AboutUs from "./components/AboutUs";
 import Footer from "./components/footer/Footer";
 import Header from "./components/headers/Header";
 import Infonrmation from "./components/Information";
+import Map from "./components/Map";
 import OurCourses from "./components/OurCourses";
 
 
@@ -11,7 +12,8 @@ function App() {
       <Header />
       <Infonrmation />
       <OurCourses />
-      <AboutUs/>
+      <AboutUs array={[""]} />
+      <Map />
       <Footer />
     </div>
   );
