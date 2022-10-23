@@ -1,4 +1,5 @@
-import python from "../assets/icons/python.svg";
+// import python from "../assets/icons/python.svg";
+import python from "../assets/icons/python.svg"
 import frontend from "../assets/icons/frontend.svg";
 import flutter from "../assets/icons/flutter.svg";
 import uxui from "../assets/icons/uxui.svg";
