@@ -1,56 +1,70 @@
 import React from "react";
 import styled from "styled-components";
 import UserImage from '../assets/images/UserIcon.png'
+import { data } from "../helpers/arrayInformation"
 
-const AboutUs = ({ array }) => {
+const AboutUs = () => {
   return (
     <GlobalContainer>
-      {array.map((data) => {
+      {data.map((datas) => {
         return (
           <>
             <Container>
-              <Title>{data.title}</Title>
               <ContainerInformation>
-                <ContainerMini>
-                  <TitleBlock>{data.titleBlock}</TitleBlock>
-                  <Description>{data.description}</Description>
-                </ContainerMini>
-              </ContainerInformation>
+              <Title>{datas.title}</Title>
+                {/* <ContainerMini>
+                  <TitleBlock>{datas.titleBlock}</TitleBlock>
+                  <Description>{datas.description}</Description>
+                </ContainerMini> */}
               <ContainerQuestion>
                 <FirstBlock>
                   <Question1>
-                    <span>{data.question}</span>
+                    <span>{datas.question}</span>
                   </Question1>
-                  <Image1 src={data.image} />
+                  <Image1 src={datas.imageFeedback} />
                 </FirstBlock>
                 <SecondBlock>
-                  <Image2 src={data.image2} />
+                  <Image2 src={datas.imageFeedback2} />
                   <Question2>
-                    <span>{data.question1}</span>
+                    <span>{datas.question1}</span>
                   </Question2>
                 </SecondBlock>
                 <ThirdBlock>
                   <Question3>
-                    <span>{data.question3}</span>
+                    <span>{datas.question3}</span>
                   </Question3>
-                  <Image3 src={data.image3} />
+                  <Image3 src={datas.imageFeedback3} />
                 </ThirdBlock>
               </ContainerQuestion>
+              </ContainerInformation>
             </Container>
             <GlobalContainerFeedback>
-                <Title2>{data.title2}</Title2>
+                <Title2>{datas.feedbacks}</Title2>
               <ContainerFeedback>
                 <FirstFeedbackBlock>
-                    <p></p>
+                <MiniFeedbackBlock>
+                    <UserName>1. {datas.userName1}</UserName>
                     <ImgUser src={UserImage} />
+                    </MiniFeedbackBlock>
+                    <Hr/>
+                    <Feedback>Проходил базовый курс по программированию на Python. Остался очень доволен менторами - очень подробно и обстоятельно рассказывал материал, приводил много примеров как из теории, так и из практики. Программа курса составлена грамотно и поэтапно, что позволяет усваивать материал.</Feedback>
                 </FirstFeedbackBlock>
                 <SecondFeedbackBlock>
-                    <p></p>
+                <MiniFeedbackBlock>
+                    <UserName>2. {datas.userName2}</UserName>
                     <ImgUser src={UserImage} />
+                    </MiniFeedbackBlock>
+                    <Hr/>
+                    <Feedback>Очень понравилась подача материала преподавателем, прекрасные примеры, хорошо иллюстрирующие и просто объясняющие самые сложные на первый взгляд понятия. Упор сделан не на тонкости языка, а на основные методы и способы программирования с учетом специфики языка, и это очень правильно!</Feedback>
                 </SecondFeedbackBlock>
                 <ThirdFeedbackBlock>
-                    <p></p>
+                    {/* <p></p> */}
+                    <MiniFeedbackBlock>
+                    <UserName>3. {datas.userName3}</UserName>
                     <ImgUser src={UserImage} />
+                    </MiniFeedbackBlock>
+                    <Hr/>
+                    <Feedback>Понравилось все. Все просто превосходно. Я долго решался и выбирал, где обучаться, и могу сказать уверенно, что с выбором я не ошибся. Курс на 11 по 10 бальной системе. Лучше я еще не видел. Я очень много чего перечитал до курса,пересмотрел большое количество лекций и видео уроков, но тут рассказали именно то, что нужно!</Feedback>
                 </ThirdFeedbackBlock>
               </ContainerFeedback>
             </GlobalContainerFeedback>
@@ -63,7 +77,7 @@ const AboutUs = ({ array }) => {
 
 const GlobalContainer = styled.div`
   width: 100%;
-  background-color: #04030a;
+  /* background-color: #04030a; */
 `;
 
 const Container = styled.div`
@@ -73,53 +87,23 @@ const Container = styled.div`
 `;
 
 const ContainerInformation = styled.div`
-  height: 220px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  width: 1429px;
   border: 1px solid #04030a;
   border-radius: 10px;
   background-color: #05071f;
-  margin-top: 30px;
-`;
-
-const ContainerMini = styled.div`
-  width: 1400px;
-  height: 180px;
-  margin: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-const TitleBlock = styled.span`
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  text-align: start;
-  color: #eeeeee;
-`;
-
-const Description = styled.p`
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 26px;
-  color: #eeeeee;
-  text-align: start;
-  margin-bottom: 1px;
+  margin-top: 1px;
+  margin-left: 25px;
 `;
 
 const Title = styled.span`
-  width: 150px;
   font-family: "Inter";
   font-style: normal;
   font-size: 30px;
   line-height: 48px;
   color: #eeeeee;
   display: flex;
-  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
 `;
 const Title2 = styled.span`
   width: 350px;
@@ -127,9 +111,7 @@ const Title2 = styled.span`
   font-family: "Inter";
   font-style: normal;
   font-size: 30px;
-  margin-left: 18px;
   color: #eeeeee;
-  display: flex;
 `;
 
 const ContainerQuestion = styled.div`
@@ -164,9 +146,9 @@ const Question1 = styled.div`
   font-size: 20px;
   line-height: 30px;
   color: #000000;
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 1px solid #04030a;
 `;
 const Question2 = styled.div`
@@ -201,79 +183,104 @@ const Question3 = styled.div`
 `;
 
 const ImgUser = styled.img`
-width: 100px;
-height: 100px;
-border-radius: 0px 10px 0px 10px;
+width: 60px;
+height: 60px;
+border-radius: 8px;
 border: 1px solid grey;
-display: flex;
-justify-content: space-between;
+margin-top: 5px;
+/* display: flex;
+justify-content: space-between; */
+`
+
+const Feedback = styled.div`
+font-size: 17px;
+line-height: 28px;
+text-align: center;
 `
 
 const Image1 = styled.img`
-  width: 700px;
+  width: 600px;
   height: 290px;
   border-radius: 12px;
   border: 2px solid white;
 `;
 const Image2 = styled.img`
-  width: 700px;
+  width: 600px;
   height: 290px;
   border-radius: 12px;
   border: 2px solid white;
 `;
 const Image3 = styled.img`
-  width: 700px;
+  width: 600px;
   height: 290px;
   border-radius: 12px;
   border: 2px solid white;
 `;
 
 const GlobalContainerFeedback = styled.div`
-  width: 100%;
+  width: 1429px;
   height: 390px;
   background-color: #05071f;
   margin-top: 40px;
-
+  margin-left: 45px;
+  text-align: center;
 `;
 
-const ContainerFeedback = styled.div`
-width: 1480px;
-margin-left: 18px;
+const UserName = styled.span`
+font-size: 25px;
+margin-top: 15px;
+margin-left: 15px;
+`
+
+const Hr = styled.hr`
 display: flex;
-justify-content: space-between;
-align-items: flex-start;
+align-items: center;
+justify-content: center;
+color: black;
+`
+
+const ContainerFeedback = styled.div`
+width: 1424px;
+display: flex;
+justify-content: space-around;
 margin-top: 15px;
 `
 
 const FirstFeedbackBlock = styled.div`
-width: 370px;
+width: 375px;
 height: 280px;
-background-color: #D9D9D9;
-border: 1px solid black;
-display: flex;
-justify-content: space-between;
+background-color: black;
+opacity: 0.9;
+border: 1px solid #1775CB;
 border-radius: 10px;
 margin-top: 20px;
+color: white;
 `
 const SecondFeedbackBlock = styled.div`
-width: 370px;
+width: 375px;
 height: 280px;
-background-color: #D9D9D9;
-border: 1px solid black;
-display: flex;
-justify-content: space-between;
+background-color: black;
+opacity: 0.9;
+border: 1px solid #1775CB;
 border-radius: 10px;
 margin-top: 20px;
+color: white;
 `
 const ThirdFeedbackBlock = styled.div`
-width: 370px;
+width: 375px;
 height: 280px;
-background-color: #D9D9D9;
-border: 1px solid black;
-display: flex;
-justify-content: space-between;
+background-color: black;
+opacity: 0.9;
+border: 1px solid #1775CB;
 border-radius: 10px;
 margin-top: 20px;
+color: white;
+`
+
+const MiniFeedbackBlock = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
 `
 
 export default AboutUs;

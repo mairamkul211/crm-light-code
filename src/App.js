@@ -5,6 +5,7 @@ import Infonrmation from "./components/Information";
 import Map from "./components/Map";
 import OurCourses from "./components/OurCourses";
 
+
 function App() {
   return (
     <div className="App">
