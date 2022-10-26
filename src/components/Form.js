@@ -39,11 +39,12 @@ const Form = () => {
 };
 
 const GlobalFormContainer = styled.div`
-  width: 100%;
+  width: 1440px;
   height: 300px;
   background-color: #05071f;
   margin-top: 40px;
   display: flex;
+  margin: 0 auto;
 `;
 
 const Container = styled.div`

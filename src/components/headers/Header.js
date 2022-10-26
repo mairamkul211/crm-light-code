@@ -39,7 +39,7 @@ const StyledHeader = styled.div`
   font-family: "Inter";
   width: 1440px;
   height: 124px;
-  background: #04030a;
+  background: #0A0A12;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

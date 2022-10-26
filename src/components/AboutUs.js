@@ -82,7 +82,7 @@ const GlobalContainer = styled.div`
 
 const Container = styled.div`
   width: 1480px;
-  margin-left: 18px;
+  margin: 0 auto;
   color: white;
 `;
 
@@ -222,7 +222,8 @@ const GlobalContainerFeedback = styled.div`
   height: 390px;
   background-color: #05071f;
   margin-top: 40px;
-  margin-left: 45px;
+  /* margin-left: 45px; */
+  margin: 0 auto;
   text-align: center;
 `;
 
