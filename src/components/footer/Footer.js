@@ -31,7 +31,7 @@ export default Footer;
 
 const StyledFooter = styled.footer`
   margin: 0 auto;
-  width: 1440px;
+  width: 100%;
   display: flex;
   height: 116px;
   justify-content: space-between;

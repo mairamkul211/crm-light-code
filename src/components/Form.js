@@ -39,7 +39,7 @@ const Form = () => {
 };
 
 const GlobalFormContainer = styled.div`
-  width: 1440px;
+  width: 100%;
   height: 300px;
   background-color: #05071f;
   margin-top: 40px;

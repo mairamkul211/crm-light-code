@@ -33,7 +33,7 @@ export default OurCourses;
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 1440px;
+  width: 100%;
   padding: 40px;
   & p {
     font-family: "Inter";
@@ -55,7 +55,7 @@ const Container = styled.div`
     width: 1200px;
   }
   & .lightCod{
-    font-size: 44px;
+    font-size: 35px;
   }
 `;
 const Cart = styled.div`

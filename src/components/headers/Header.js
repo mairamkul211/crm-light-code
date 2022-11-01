@@ -37,7 +37,7 @@ export default Header;
 
 const StyledHeader = styled.div`
   font-family: "Inter";
-  width: 1440px;
+  width: 100%;
   height: 124px;
   background: #0A0A12;
   margin: 0 auto;
