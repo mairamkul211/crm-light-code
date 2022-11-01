@@ -6,10 +6,12 @@
 // import Map from "./components/Map";
 // import OurCourses from "./components/OurCourses";
 
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
     <div className="App">
+      <SignUp />
       {/* <Header />
       <Infonrmation />
       <OurCourses />
