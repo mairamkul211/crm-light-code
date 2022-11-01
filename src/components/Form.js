@@ -44,6 +44,7 @@ const GlobalFormContainer = styled.div`
   background-color: #05071f;
   margin-top: 40px;
   display: flex;
+  margin: 0 auto;
 `;
 
 const Container = styled.div`

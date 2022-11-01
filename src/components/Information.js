@@ -43,7 +43,7 @@ export default Infonrmation;
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 1440px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   height: 446px;
